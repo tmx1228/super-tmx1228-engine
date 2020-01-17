@@ -1,0 +1,22 @@
+### download and install the illumina tool
+wget "https://api.bintray.com/content/basespace/BaseSpaceCLI-EarlyAccess-BIN/latest/\$latest/amd64-linux/bs?bt_package=latest" -O ./bin/bs
+chmod u+x $HOME/bin/bs
+wget https://api.bintray.com/content/basespace/BaseSpace-Copy-BIN/\$latest/linux/bscp?bt_package=develop -O bs-cp
+chmod u+x bs-cp
+### authenticate and go to the webpage click the button
+bs auth
+### see how many projects do we have
+bs list projects
+| Sample-5             | ds.cd52576212ea4786bf1a04aa0a67b8e4 | AdliLab      | illumina.fastq.v1.8 |
+| Sample-4             | ds.29785eeda3f44bbf8b00448b27da459b | AdliLab      | illumina.fastq.v1.8 |
+| Sample-3             | ds.6c60274bffaf4db882f56967095a47df | AdliLab      | illumina.fastq.v1.8 |
+| Sample-2             | ds.0063a937b7f14086b9e733283fc349de | AdliLab      | illumina.fastq.v1.8 |
+| Sample-1             | ds.3bcc5de2a1874faebbb0c15171a9c5e2 | AdliLab      | illumina.fastq.v1.8 |
+### see how to download
+bs download --help
+### download dataset with the dataset id
+bs download dataset --id ds.cd52576212ea4786bf1a04aa0a67b8e4 -o /data/adli/adlilab/Runs/20200115_Alex/
+bs download dataset --id ds.29785eeda3f44bbf8b00448b27da459b -o /data/adli/adlilab/Runs/20200115_Alex/
+bs download dataset --id ds.6c60274bffaf4db882f56967095a47df -o /data/adli/adlilab/Runs/20200115_Alex/
+bs download dataset --id ds.0063a937b7f14086b9e733283fc349de -o /data/adli/adlilab/Runs/20200115_Alex/
+bs download dataset --id ds.3bcc5de2a1874faebbb0c15171a9c5e2 -o /data/adli/adlilab/Runs/20200115_Alex/
